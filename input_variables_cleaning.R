@@ -9,29 +9,29 @@ library(missForest)
 
 
 #Read all input files
-country_income_status <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/Country_Income_Status_WHO.xlsx', sheet = "List of economies")
+country_income_status <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/Country_Income_Status_WHO.xlsx', sheet = "List of economies")
 
-rep_wash_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/rep_wash/wash_data.xlsx', sheet = "Cleaned Data")
-env_health_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/rep_gho_env/env_health_data.xlsx', sheet = "cleaned_data")
-health_spending_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/HealthSpending/healthspeinding_cleaned.xlsx', sheet = "Sheet 1")
-healthcare_access_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/healthcare_access_rep_dhs_hca/healthcare_access_data.xlsx', sheet = "Cleaned Data")
-health_determinant_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/Health_Determinants_rep_dhs_unicef_sdh/healthdeterminants_cleaned.xlsx', sheet = "Sheet 1")
-climate_cleaned_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/climate_cleaned_data.xlsx', sheet = "Sheet 1")
-development_indices_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/development_indices_globalDataLab_rep_gdl1/development_indices_subset.xlsx', sheet = "CleanedData")
-antibioticconsumption_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/antibioticconsumption_consumption.xlsx', sheet = "Sheet 1")
-adult_health_nutrition <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/adult_health_nutrition_rep_dhs_ahn/adult_health_nutrition_data.xlsx', sheet = "cleaned data")
+rep_wash_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/rep_wash/wash_data.xlsx', sheet = "Cleaned Data")
+env_health_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/rep_gho_env/env_health_data.xlsx', sheet = "cleaned_data")
+health_spending_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/HealthSpending/healthspeinding_cleaned.xlsx', sheet = "Sheet 1")
+healthcare_access_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/healthcare_access_rep_dhs_hca/healthcare_access_data.xlsx', sheet = "Cleaned Data")
+health_determinant_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/Health_Determinants_rep_dhs_unicef_sdh/healthdeterminants_cleaned.xlsx', sheet = "Sheet 1")
+climate_cleaned_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/climate_cleaned_data.xlsx', sheet = "Sheet 1")
+development_indices_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/development_indices_globalDataLab_rep_gdl1/development_indices_subset.xlsx', sheet = "CleanedData")
+antibioticconsumption_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/antibioticconsumption_consumption.xlsx', sheet = "Sheet 1")
+adult_health_nutrition <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/adult_health_nutrition_rep_dhs_ahn/adult_health_nutrition_data.xlsx', sheet = "cleaned data")
 
 ##Global Governance
-gg_ControlofCorruption_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/ControlofCorruption.xlsx', sheet = "Sheet 1")
-gg_GovernmentEffectiveness_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/GovernmentEffectiveness.xlsx', sheet = "Sheet 1")
-gg_PoliticalStabilityNoViolence_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/PoliticalStabilityNoViolence.xlsx', sheet = "Sheet 1")
-gg_RegulatoryQuality_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/RegulatoryQuality.xlsx', sheet = "Sheet 1")
-gg_RuleofLaw_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/RuleofLaw.xlsx', sheet = "Sheet 1")
-gg_VoiceandAccountability_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/VoiceandAccountability.xlsx', sheet = "Sheet 1")
+gg_ControlofCorruption_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/ControlofCorruption.xlsx', sheet = "Sheet 1")
+gg_GovernmentEffectiveness_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/GovernmentEffectiveness.xlsx', sheet = "Sheet 1")
+gg_PoliticalStabilityNoViolence_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/PoliticalStabilityNoViolence.xlsx', sheet = "Sheet 1")
+gg_RegulatoryQuality_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/RegulatoryQuality.xlsx', sheet = "Sheet 1")
+gg_RuleofLaw_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/RuleofLaw.xlsx', sheet = "Sheet 1")
+gg_VoiceandAccountability_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/global_governance_cleaned_data/VoiceandAccountability.xlsx', sheet = "Sheet 1")
 
 
 #WHO Data
-who_data <- read_excel('/Users/nikhilg/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/whocleaned_data.xlsx', sheet = "Sheet 1")
+who_data <- read_excel('/Users/Documents/Vivli\ Research\ Project/vivli\ indicator\ input\ data/whocleaned_data.xlsx', sheet = "Sheet 1")
 
 # Create a list of your data frames
 data_frames_list <- list(gg_VoiceandAccountability_data, 
